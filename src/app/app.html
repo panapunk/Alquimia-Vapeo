@@ -1,0 +1,65 @@
+<div *ngIf="showSplash" class="splash">
+    <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+</div>
+
+<!-- Menú principal -->
+<ion-menu id="menuPral" [content]="content" side="left" type="overlay">
+    <ion-header class="menuIzqHeader">
+        <ion-toolbar>
+            <ion-title>{{ 'menuHeaderTitle' | translate }}</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p.component)">{{p.title}} | translate</button> -->
+
+            <!-- <button menuClose ion-item  (click)="openPageForeach('menuListHome')">{{ 'menuListHome' | translate }}</button> -->
+            <button menuClose ion-item (click)="openPageForeach('menuListAlquimia')">
+                <ion-col col-3><ion-icon name="flask"></ion-icon></ion-col> <ion-col col-9>{{ 'menuListAlquimia' | translate }}</ion-col>
+            </button>
+            <button menuClose ion-item (click)="openPageForeach('menuListResistencias')" class="hidden">
+                <ion-col col-3><ion-icon name="battery-full"></ion-icon></ion-col> <ion-col col-9>{{ 'menuListResistencias' | translate }}</ion-col>
+            </button>
+            <button menuClose ion-item (click)="openPageForeach('menuListLogin')" class="hidden">
+                <ion-col col-3><ion-icon name="log-in"></ion-icon></ion-col> <ion-col col-9>{{ 'menuListLogin' | translate }}</ion-col>
+            </button>
+            <button menuClose ion-item (click)="openPageForeach('menuListConfiguracion')">
+                <ion-col col-3><ion-icon name="construct"></ion-icon></ion-col> <ion-col col-9>{{ 'menuListConfiguracion' | translate }}</ion-col>
+            </button>
+            <button menuClose ion-item (click)="openPageForeach('menuListAbout')">
+                <ion-col col-3><ion-icon name="information-circle"></ion-icon></ion-col> <ion-col col-9>{{ 'menuListAbout' | translate }}</ion-col>
+            </button>
+
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<!-- 
+<ion-menu id="rightMenu" [content]="content" side="right" type="reveal" class="hidden">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Items</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item (click)="rightMenuClick('Item One')">Item UNO</button>
+            <button ion-item (click)="rightMenuClick('Item Two')">Item DOS</button>
+        </ion-list>
+        <ion-card *ngIf="text">
+            <ion-card-content>
+                Tu has pulsado {{ text }}
+            </ion-card-content>
+        </ion-card>
+    </ion-content>
+</ion-menu> 
+-->
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false" [class]="selectedTheme"></ion-nav>
+<!-- <ion-nav [root]="rootPage"></ion-nav> -->

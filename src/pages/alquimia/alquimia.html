@@ -1,0 +1,217 @@
+<!--
+  Generated template for the AlquimiaPage page.
+  
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+
+        <ion-grid>
+            <ion-row>
+
+                <ion-col col-2>
+                    <button ion-button menuToggle="menuPral"> <ion-icon name="menu"></ion-icon> </button>
+                </ion-col>
+
+                <ion-col col-8 align-self-center>
+                    <ion-title>{{ "alqHeaderTitle" | translate }}</ion-title>
+                </ion-col>
+
+                <ion-col col-2 class="hidden">
+                    <button ion-button menuToggle="rightMenu"> <ion-icon name="menu"></ion-icon> </button>
+                </ion-col>
+
+            </ion-row>
+        </ion-grid>
+
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+<div #alquimiaContentElementosConfig>
+
+    <!-- TOTAL -->
+    <ion-card class="cardFull" #contentTotal>
+        <ion-card-header>
+            <ion-item class="labelInput">
+                <ion-label>{{ "alqCardTotalTitle" | translate }}</ion-label>
+            </ion-item>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-item class="labelInput">
+                <ion-label>{{ "alqCardTotalInputLabel" | translate }}</ion-label>
+                <ion-input type="number" id="alqCardTotalInput" name="alqCardTotalInput" (ionFocus)="onFocusValor($event)" (ionBlur)="onBlurValor($event)" [(ngModel)]="cantidadTotal" (ngModelChange)="totalChangeInput($event)"></ion-input>
+            </ion-item>
+
+            <br>
+            <span class="textInfoCard"> {{ "alqCardTotalDescription" | translate }} </span>
+
+            <ion-range min="0" max="100" snaps="true" pin="true" color="primary" id="alqCardTotalRange" step="5" [(ngModel)]="percentTotal" (ngModelChange)="totalChangeRange($event)">
+                <ion-label range-left>PG <span id="pgPercentTotalText">{{pgPercentTotalText}}</span></ion-label>
+                <ion-label range-right>VG <span id="vgPercentTotalText">{{vgPercentTotalText}}</span></ion-label>
+            </ion-range>
+        </ion-card-content>
+    </ion-card>
+
+    <!-- NICOTINA -->
+    <ion-card class="cardFull cardPaddingTop" #contentNicotina>
+        <ion-card-header>
+            <ion-item class="labelInput itenToggleNicotina">
+                <ion-label>{{ "alqCardNicotinaTitle" | translate }}</ion-label>
+                <ion-toggle [(ngModel)]="nicotinaToggle" (ngModelChange)="nicotinaChangeToggle($event)"></ion-toggle>
+            </ion-item>
+        </ion-card-header>
+
+        <ion-card-content class="outOfScreen" #nicotinaContent>
+            <!-- {{ "alqCardTotalDescription" | translate }} -->
+            <ion-item class="labelInput">
+                <ion-label>{{ "alqCardNicotinaInputLabel" | translate }}</ion-label>
+                <ion-input type="number" id="cantidadNicotinaFinal" name="cantidadNicotinaFinal" (ionFocus)="onFocusValor($event)" (ionBlur)="onBlurValor($event)" [(ngModel)]="cantidadNicotinaFinal" (ngModelChange)="cantidadNicotinaFinalChange($event)"></ion-input>
+            </ion-item>
+
+            <br>
+            <span class="textInfoCard"> {{ "alqCardNicotinaDescriptionBase" | translate }} </span>
+
+            <ion-item class="labelInput">
+                <ion-label>{{ "alqCardNicotinaInputLabel2" | translate }}</ion-label>
+                <ion-input type="number" min="0" max="36" id="cantidadNicotinaBase" name="cantidadNicotinaBase" (ionFocus)="onFocusValor($event)" (ionBlur)="onBlurValor($event)" [(ngModel)]="cantidadNicotinaBase" (ngModelChange)="cantidadNicotinaBaseChange($event)"></ion-input>
+            </ion-item>
+            
+            <ion-item class="labelInput">
+                <ion-label>PG(%)</ion-label>
+                <ion-input type="number" min="0" max="100" id="cantidadNicotinaPGBase" name="cantidadNicotinaPGBase" (ionFocus)="onFocusValor($event)" (ionBlur)="onBlurValor($event)" [(ngModel)]="cantidadNicotinaPGBase" (ngModelChange)="cantidadNicotinaPGBaseChange($event)"></ion-input>
+            </ion-item>
+            <br>
+
+            <!-- <br> -->
+            <ion-range class="hidden" min="0" max="100" snaps="true" pin="true" color="primary" id="alqCardNicotinaRange" step="5" [(ngModel)]="percentNicotina" (ngModelChange)="nicotinaChangeRange($event)">
+                <ion-label range-left>PG <span id="pgPercentNicotinaText">{{pgPercentNicotinaText}}</span></ion-label>
+                <ion-label range-right>VG <span id="vgPercentNicotinaText">{{vgPercentNicotinaText}}</span></ion-label>
+            </ion-range>
+
+        </ion-card-content>
+    </ion-card>
+
+    <!-- AROMAS -->
+    <ion-card class="cardFull cardPaddingTop" #contentAromas>
+        <ion-card-header class="alqAromasIonCarHeader">
+            <ion-item class="labelInput">
+                <ion-label>{{ "alqCardAromasTitle" | translate }}</ion-label>
+                <ion-icon item-end name="add-circle" (click)="openCardFlotanteToAromas()"></ion-icon>
+            </ion-item>
+        </ion-card-header>
+
+        <ion-card-content class="aromasCardContent">
+            
+            <table class="tableDatos">
+                <tbody *ngFor="let item of aromas" >
+                    <tr>
+                        <td><ion-icon name="flask" item-left class="colBorder"></ion-icon></td>
+                        <td><span class="colBorder">{{item.nombreAroma}}</span></td>
+                        <td><span class="colBorder spanPercent">{{item.cantidadAroma}} %</span></td>
+                        <td><ion-icon name="brush" item-right class="colBorder" (click)="editarAroma(item)"></ion-icon></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </ion-card-content>
+    </ion-card>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</div>
+
+<!-- DIV FLOTANTE -->
+<div #flotanteDiv class="outOfScreen">
+    <ion-card class="cardFull">
+
+        <ion-card-header>
+            <ion-item class="labelInput itenToggleNicotina">
+                <ion-label>{{titleCardFlotanteTexto}}</ion-label>
+                <ion-icon name="close" (click)="closeCardFlotante($event)" item-right></ion-icon>
+            </ion-item>
+        </ion-card-header>
+
+        <ion-card-content>
+
+            <ion-item class="labelInput">
+                <ion-label >{{nombreCardFlotanteTexto}}</ion-label>
+                <ion-input type="text" id="nombreCardFlotanteValor" name="nombreCardFlotanteValor" [(ngModel)]="nombreCardFlotanteValor" (ionFocus)="onFocusValor($event)" (ionBlur)="onBlurValor($event)"></ion-input>
+                <ion-icon name="search" (click)="buscarAromaNombre($event)" item-right primary></ion-icon>
+            </ion-item>
+
+            <ion-range class="ionRangeCardFlotante" min="0" max="100" snaps="true" pin="true" color="primary" id="rangeCardFlotanteValor" step="5" [(ngModel)]="rangeCardFlotanteValor" (ngModelChange)="changeRangeCardFlotante($event)">
+                <ion-label range-left><span id="VGrangeCardFlotanteTexto">{{VGporcentajeCardFlotanteTexto}}</span></ion-label>
+                <ion-label range-right><span id="PGrangeCardFlotanteTexto">{{PGporcentajeCardFlotanteTexto}}</span></ion-label>
+            </ion-range>
+            
+            <div #itemCardFlotanteNicotina>
+            <ion-item class="labelInput">
+                <ion-label >{{nicotinaCardFlotanteTexto}}</ion-label>
+                <ion-input type="number" value="0" id="nicotinaCardFlotanteValor" name="nicotinaCardFlotanteValor" [(ngModel)]="nicotinaCardFlotanteValor" (ionFocus)="onFocusValor($event)" (ionBlur)="onBlurValor($event)"></ion-input>
+            </ion-item>
+            </div>
+            <ion-item class="labelInput">
+                <ion-label >{{cantidadMaxCardFlotanteTexto}}</ion-label>
+                <ion-input type="number" value="" placeholder="∞" id="cantidadMaxCardFlotanteValor" name="cantidadMaxCardFlotanteValor" [(ngModel)]="cantidadMaxCardFlotanteValor" (ionFocus)="onFocusValor($event)" (ionBlur)="onBlurValor($event)"></ion-input>
+            </ion-item>
+            
+            <ion-item class="labelInput" item-end>
+                <button ion-button class="class1" (click)="addAromaNew($event)"><span item-left>{{botonCardFlotante}}</span> <ion-icon item-right name="{{iconBotonCardFlotante}}"></ion-icon> </button>
+            </ion-item>
+                            
+        </ion-card-content>
+    </ion-card>
+</div>
+
+<!-- FAB -->
+<ion-fab right bottom #contentFab>
+    <div #alqBottomAcciones>
+        <button primary ion-fab mini color="primary" class="class1" (click)="calcularValores($event)"><ion-icon name="calculator"></ion-icon></button>
+    </div>
+</ion-fab>
+<!-- 
+<ion-fab left bottom>
+    <div #alqBottomAcciones>
+        <button primary ion-fab color="primary" class="class1"><ion-icon name="arrow-dropright"></ion-icon></button>
+        <ion-fab-list side="right">
+            <button ion-fab (click)="calcularValores($event)"><ion-icon name="calculator"></ion-icon></button>
+            <button ion-fab class="hidden"><ion-icon name="refresh"></ion-icon></button>
+            <button ion-fab class="hidden"><ion-icon name="search"></ion-icon></button>
+            <button ion-fab class="hidden"><ion-icon name="reorder"></ion-icon></button>
+        </ion-fab-list>
+    </div>
+</ion-fab> 
+-->
+
+
+<ion-list #errorTitleId class="hidden">
+    <ion-item title="alqCardAromaErrorSinValores" status="false">{{ 'alqCardAromaErrorSinValores' | translate }}</ion-item>
+    <ion-item title="alqCardAromaErrorExiste" status="false">{{ 'alqCardAromaErrorExiste' | translate }}</ion-item>
+    <ion-item title="alqCalculoErrorCantidaTotalNoExiste" status="false">{{ 'alqCalculoErrorCantidaTotalNoExiste' | translate }}</ion-item>
+    <ion-item title="alqCalculoErrorAromasNoExiste" status="false">{{ 'alqCalculoErrorAromasNoExiste' | translate }}</ion-item>
+    <ion-item title="alqCalculoErrorValidacionControlAromas" status="false">{{ 'alqCalculoErrorValidacionControlAromas' | translate }}</ion-item>
+    <ion-item title="alqCalculoErrorValidacionesControlPG" status="false">{{ 'alqCalculoErrorValidacionesControlPG' | translate }}</ion-item>
+    <ion-item title="alqCalculoErrorValidacionesControlVG" status="false">{{ 'alqCalculoErrorValidacionesControlVG' | translate }}</ion-item>
+    <!-- form aromas -->
+    <ion-item title="alqCardAromasTitleAdd" status="false">{{ 'alqCardAromasTitleAdd' | translate }}</ion-item>
+    <ion-item title="alqCardAromasInputNombreLabel" status="false">{{ 'alqCardAromasInputNombreLabel' | translate }}</ion-item>
+    <ion-item title="alqCardAromasInputCantidadLabel" status="false">{{ 'alqCardAromasInputCantidadLabel' | translate }}</ion-item>
+    <ion-item title="alqCardAromasButonLabel" status="false">{{ 'alqCardAromasButonLabel' | translate }}</ion-item>
+
+    <!-- Errores para página de receta -->
+    <ion-item title="alqModalHeaderTitle" status="false">{{ 'alqModalHeaderTitle' | translate }}</ion-item>
+    <ion-item title="alqModalLabelBases" status="false">{{ 'alqModalLabelBases' | translate }}</ion-item>
+    <ion-item title="alqModalLabelNicotina" status="false">{{ 'alqModalLabelNicotina' | translate }}</ion-item>
+    <ion-item title="alqModalLabelAromas" status="false">{{ 'alqModalLabelAromas' | translate }}</ion-item>
+</ion-list>
+
+
+
+</ion-content>

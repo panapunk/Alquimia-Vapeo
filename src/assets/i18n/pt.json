@@ -1,0 +1,55 @@
+{
+    "AppName": "Alquimia Vapeo",
+    "HELLO": "Hola",
+    "WELCOME": "Bienvenido",
+    "GREETING": "Hola, {{ value }}",
+
+    "menuHeaderTitle": "Menu",
+
+    "menuListAbout": "About",
+    "menuListAlquimia": "Alquimia",
+    "menuListConfiguracion": "Preferencias",
+    "menuListHome": "Inicio",
+    "menuListLogin": "Login",
+    "menuListRecetas": "Recetas",
+    "menuListResistencias": "Calcular Resistencias",
+
+    "aboHeaderTitle": "Acerca de esta app",
+    "alqHeaderTitle": "Alquimia",
+    "conHeaderTitle": "Ajustar prefencias",
+    "homHeaderTitle": "Inicio",
+    "logHeaderTitle": "Acceso cuenta",
+    "recHeaderTitle": "Recetas",
+    "resHeaderTitle": "Resistencias",
+
+    "alqCardTotalTitle": "Cantidad total deseada",
+    "alqCardTotalDescription": "Porcentaje de componentes base para la mezcla",
+    "alqCardTotalInputLabel": "Cantidad (ml)",
+
+    "alqCardNicotinaTitle": "Nicotina",
+    "alqCardNicotinaDescription": "Cantidad de Nicotina",
+    "alqCardNicotinaInputLabel": "Nicotina en mezcla (mg/ml)",
+    "alqCardNicotinaDescriptionBase": "Características de la base de nicotina que utilizaremos para la mezcla",
+    "alqCardNicotinaInputLabel2": "Nicotina en base (mg/ml)",
+
+    "alqCardAromasTitle": "Aromas para la mezcla",
+    "alqCardAromasDescription": "Aromas que utilizaremos para la mezcla",
+    "alqCardAromasInputNombreLabel": "Nombre aroma",
+    "alqCardAromasInputCantidadLabel": "Cantidad (%)",
+    "alqCardAromasButonLabel": "Añadir Aroma ",
+
+    "alqCardAromaErrorSinValores": "Error, no se han recibido valores para añadir",
+    "alqCardAromaErrorExiste": "Error, El aroma ya existe, no se añade",
+    "alqCardAromaErrorCaracteresMinimos": "Error, nombre demasiado corto, mínimo {{ value }} caracteres",
+    "alqCalculoErrorCantidaTotalNoExiste": "Error, no se ha introducido la cantidad total",
+    "alqCalculoErrorAromasNoExiste": "Error, no se han introducido aromas",
+    "alqCalculoErrorValidacionControlAromas": "Error, cálculos mal realizados, intentar de nuevo",
+    "alqCalculoErrorValidacionesControlPG": "Error, cantidad de PG superada, reduce porcentaje VG",
+    "alqCalculoErrorValidacionesControlVG": "Error, cantidad de VG superada, reduce porcentaje PG",
+
+    "alqModalHeaderTitle": "Receta Obtenida",
+
+    "confThemeCardHeader": "Cambiar tema",
+
+    "conIdiomaTitle": "Escoge tu idioma"
+}

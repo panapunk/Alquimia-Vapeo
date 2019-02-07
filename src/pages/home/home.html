@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    
+    <ion-grid>
+      <ion-row>
+        
+        <ion-col col-2>
+          <button ion-button menuToggle="menuPral"> <ion-icon name="menu"></ion-icon> </button>
+        </ion-col>
+        
+        <ion-col col-8  align-self-center>
+          <ion-title>{{ "homHeaderTitle" | translate }}</ion-title>
+        </ion-col>
+        
+        <ion-col col-2>
+          <button ion-button menuToggle="rightMenu"> <ion-icon name="menu"></ion-icon> </button>
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>Escoge el idioma</ion-label>
+      <ion-select (ionChange)="choose($event)">
+        <ion-option *ngFor="let item of idioms" [value]="item.value">
+          {{ item.label }}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <h1>{{ 'HELLO' | translate }}</h1>
+    <p>{{ 'WELCOME' | translate }}</p>
+    <p>{{ 'GREETING' | translate:{value: '@nicobytes'} }}</p>
+  </div>
+</ion-content>

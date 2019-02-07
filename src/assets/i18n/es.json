@@ -1,0 +1,79 @@
+{
+    "AppName": "Alchemy Vapp",
+    "HELLO": "Hola",
+    "WELCOME": "Bienvenido",
+    "GREETING": "Hola, {{ value }}",
+
+    "menuHeaderTitle": "Menu",
+
+    "menuListAbout": "About",
+    "menuListAlquimia": "Alquimia",
+    "menuListConfiguracion": "Preferencias",
+    "menuListHome": "Inicio",
+    "menuListLogin": "Login",
+    "menuListRecetas": "Recetas",
+    "menuListResistencias": "Calcular Resistencias",
+
+    "aboHeaderTitle": "Acerca de esta app",
+    "alqHeaderTitle": "Alquimia",
+    "conHeaderTitle": "Ajustar prefencias",
+    "homHeaderTitle": "Inicio",
+    "logHeaderTitle": "Acceso cuenta",
+    "recHeaderTitle": "Recetas",
+    "resHeaderTitle": "Resistencias",
+
+    "alqCardTotalTitle": "Configuración de receta",
+    "alqCardTotalInputLabel": "Cantidad (ml)",
+    "alqCardTotalDescription": "Porcentaje de componentes base para la mezcla",
+
+    "alqCardNicotinaTitle": "Nicotina",
+    "alqCardNicotinaDescription": "Cantidad de Nicotina",
+    "alqCardNicotinaInputLabel": "Nicotina en mezcla (mg/ml)",
+    "alqCardNicotinaDescriptionBase": "Características de la base de nicotina que utilizaremos para la mezcla",
+    "alqCardNicotinaInputLabel2": "Nicotina en base (mg/ml)",
+
+    "alqCardAromasTitle": "Aromas para la mezcla",
+    "alqCardAromasDescription": "Aromas que utilizaremos para la mezcla",
+    "alqCardAromasTitleAdd": "Añadir aroma",
+    "alqCardAromasInputNombreLabel": "Nombre aroma",
+    "alqCardAromasInputCantidadLabel": "Cantidad (%)",
+    "alqCardAromasButonLabel": "Añadir Aroma ",
+
+    "alqCardAromaErrorSinValores": "Error, no se han recibido valores para añadir",
+    "alqCardAromaErrorExiste": "Error, El aroma ya existe, no se añade",
+    "alqCardAromaErrorCaracteresMinimos": "Error, nombre demasiado corto, mínimo {{ value }} caracteres",
+    "alqCalculoErrorCantidaTotalNoExiste": "Error, no se ha introducido la cantidad total",
+    "alqCalculoErrorAromasNoExiste": "Error, no se han introducido aromas",
+    "alqCalculoErrorValidacionControlAromas": "Error, cálculos mal realizados, intentar de nuevo",
+    "alqCalculoErrorValidacionesControlPG": "Error, cantidad de PG superada, reduce porcentaje VG",
+    "alqCalculoErrorValidacionesControlVG": "Error, cantidad de VG superada, reduce porcentaje PG",
+
+    "alqModalHeaderTitle": "Receta Obtenida",
+    "alqModalLabelBases": "Bases",
+    "alqModalLabelNicotina": "Nicotina",
+    "alqModalLabelAromas": "Aromas",
+
+    "confThemeCardHeader": "Cambiar tema",
+
+    "conIdiomaTitle": "Escoge tu idioma",
+
+    "aboAppName": "Alchemy Vapp",
+    "aboVer": "Version 0.0.16",
+    "aboDescription1": "Aplicación creada con motivos de estudio y aprendizaje para el uso y aprovechamiento de los frameworks Ionic y Apache Cordova, así como las tecnologías de desarrollo Angular JS, TypeScript, HTML5 y CSS3.",
+    "aboDev1": "Desarrollado por:",
+    "aboDevName": "Fluceando Developers",
+    "aboContactEmailText": "email",
+    "LogoUrl": "assets/imgs/logo_72x72.png",
+    "aboLicenciaLogoUrl": "assets/imgs/licencia_80x15.png",
+    "aboLicenciaImageUrl": "assets/imgs/captura.png",
+    "aboLicenciaPdfUrl": "assets/imgs/pdf.png",
+    "aboLicenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.es",
+    "aboQuestions": "Si tenes algún interés particular con cualquier cuestión relacionada con esta aplicación (objetivo de la aplicación y uso de la misma, tecnologías utilizadas para su desarrollo, etc...) puedes ponerte en contacto con el creador a través de los siguientes métodos:",
+    "contactTwitterText": "twitter",
+    "contactMail": "panapunk@gmail.com",
+    "aboURLTeleGraph": "https://telegra.ph/Alquima-Vapeo-09-17",
+    "aboURLTeleGraphText": "Ver créditos online",
+    "aboAuthorcontact": "panapunk@gmail.com",
+    "contactTwitter": "@panapunk"
+
+}

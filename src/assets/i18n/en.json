@@ -1,0 +1,70 @@
+{
+    "AppName": "Alchemy Vapp",
+    "HELLO": "Hello",
+    "WELCOME": "Wellcome",
+    "GREETING": "Hi, {{ value }}",
+
+    "menuHeaderTitle": "Menu",
+
+    "menuListAbout": "About",
+    "menuListAlquimia": "Alchemy",
+    "menuListConfiguracion": "Settings",
+    "menuListHome": "Home",
+    "menuListLogin": "Login",
+    "menuListRecetas": "Recetas",
+    "menuListResistencias": "Calculate Resistors",
+
+    "aboHeaderTitle": "About this app",
+    "alqHeaderTitle": "Alchemy",
+    "conHeaderTitle": "Settings",
+    "homHeaderTitle": "Home",
+    "logHeaderTitle": "Account access",
+    "recHeaderTitle": "Recipes",
+    "resHeaderTitle": "Resistors",
+
+    "alqCardTotalTitle": "Total quantity",
+    "alqCardTotalInputLabel": "Quantity (ml)",
+    "alqCardTotalDescription": "Percent of the base components for the result",
+
+    "alqCardNicotinaTitle": "Nicotine",
+    "alqCardNicotinaDescription": "Amount of Nicotine",
+    "alqCardNicotinaInputLabel": "Nicotine in mixture (mg/ml)",
+    "alqCardNicotinaDescriptionBase": "Characteristics of the nicotine base that we will use for the mixture",
+    "alqCardNicotinaInputLabel2": "Nicotine in base (mg/ml)",
+
+    "alqCardAromasTitle": "Aromas for the mixture",
+    "alqCardAromasDescription": "Aromas that we will use for the mixture",
+    "alqCardAromasInputNombreLabel": "Aroma name",
+    "alqCardAromasInputCantidadLabel": "Quantity (%)",
+    "alqCardAromasButonLabel": "Add Aroma ",
+
+    "alqCardAromaErrorSinValores": "Error, no values have been received to add",
+    "alqCardAromaErrorExiste": "Error, The scent already exists, it is not added",
+    "alqCardAromaErrorCaracteresMinimos": "Error, name too short, minimum {{ value }} characters",
+    "alqCalculoErrorCantidaTotalNoExiste": "Error, the total amount has not been entered",
+    "alqCalculoErrorAromasNoExiste": "Error, no aromas have been introduced",
+    "alqCalculoErrorValidacionControlAromas": "Error, wrong calculations, try again",
+    "alqCalculoErrorValidacionesControlPG": "Error, amount of PG exceeded, reduces percentage VG",
+    "alqCalculoErrorValidacionesControlVG": "Error, amount of VG exceeded, reduces percentage PG",
+
+    "alqModalHeaderTitle": "Recipe Obtained",
+    "alqModalLabelBases": "Bases",
+    "alqModalLabelNicotina": "Nicotine",
+    "alqModalLabelAromas": "Aromas",
+
+    "confThemeCardHeader": "Change theme",
+
+    "conIdiomaTitle": "Choose your language",
+
+    "aboAppName": "Alchemy Vapp",
+    "aboDescription1": "Application created with study and learning motives for the use and exploitation of the Ionic and Apache Cordova frameworks, as well as the JS, TypeScript, HTML5 and CSS3 Angular development technologies.",
+    "aboDev1": "Developed by:",
+    "aboDevName": "Fluceando Developers",
+    "aboContactEmailText": "email",
+    "aboLicenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "aboQuestions": "If you have any particular interest with any question related to this application (objective of the application and use of it, technologies used for its development, etc ...) you can contact the creator through the following methods:",
+    "contactTwitterText": "twitter",
+    "contactMail": "panapunk@gmail.com",
+    "aboURLTeleGraph": "https://telegra.ph/Alchemy-Vapp-09-18",
+    "aboURLTeleGraphText": "view online credits"
+    }

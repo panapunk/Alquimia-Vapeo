@@ -1,0 +1,180 @@
+<!--
+  Generated template for the AlquimiaModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+
+        <ion-grid>
+            <ion-row>
+                <ion-col col-2>
+                    <ion-icon name="arrow-round-back" item-left class="colBorder" (click)="closeModal()"></ion-icon>
+                    <!-- <ion-icon name="arrow-round-back" ></ion-icon> -->
+                </ion-col>
+                <ion-col col-10 align-self-center>
+                    <ion-title>{{titlePage}}</ion-title>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <!-- RESULTADO -->
+    <ion-card class="cardFull">
+
+        <ion-card-content>
+
+            <ion-list class="alqAromasList">
+
+            <!-- 
+                <ion-item *ngFor="let item of datosTabla">
+                    <ion-label item-left>{{item.texto}}</ion-label>
+                    <ion-label item-content>{{item.valor}}ml</ion-label>
+                    <ion-label item-right>{{item.descripcion}}</ion-label>
+                </ion-item> 
+            -->
+
+                <div #resultadoContenidoBases>
+                    <!-- 
+                    <table class="tableDatos">
+                        <tbody>
+                            <tr>
+                                <td><ion-label>{{basesLabelText}}</ion-label></td>
+                                <td><ion-item class="labelInput"></ion-item></td>
+                                <td><ion-item class="labelInput"></ion-item></td>
+                            </tr>
+                            <tr *ngFor="let item of datosTablaBases">
+                                <td><ion-item class="labelInput">{{item.texto}}</ion-item></td>
+                                <td><ion-item class="labelInput">{{item.valor}}ml</ion-item></td>
+                                <td><ion-item class="labelInput">{{item.descripcion}}</ion-item></td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                    -->
+                    <table class="tableDatos">
+                        <tbody> <tr>
+                                <td><ion-label>{{basesLabelText}}</ion-label></td>
+                                <td><ion-item class="labelInput"></ion-item></td>
+                                <td><ion-item class="labelInput"></ion-item></td>
+                        </tr> </tbody>
+                    </table>
+                    <table class="tableDatos">
+                        <tbody *ngFor="let item of datosTablaBases" >
+                            <tr>
+                                <td><ion-item class="labelInput">{{item.texto}}</ion-item></td>
+                                <td><ion-item class="labelInput">{{item.valor}}ml</ion-item></td>
+                                <td><ion-item class="labelInput">{{item.descripcion}}</ion-item></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--
+                        <ion-item *ngFor="let item of datosTablaBases">
+                            <ion-label item-left>{{item.texto}}</ion-label>
+                            <ion-label item-content>{{item.valor}}ml</ion-label>
+                            <ion-label item-right>{{item.descripcion}}</ion-label>
+                        </ion-item>
+                    -->
+                    <ion-item-divider></ion-item-divider>
+                </div>
+
+                <div #resultadoContenidoNicotina>
+                    <table class="tableDatos">
+                        <tbody> <tr>
+                                <td><ion-label>{{nicotinaLabelText}}</ion-label></td>
+                                <td><ion-item class="labelInput"></ion-item></td>
+                                <td><ion-item class="labelInput"></ion-item></td>
+                        </tr> </tbody>
+                    </table>
+                    <table class="tableDatos">
+                        <tbody *ngFor="let item of datosTablaNicotina" >
+                            <tr>
+                                <td><ion-item class="labelInput">{{item.texto}}</ion-item></td>
+                                <td><ion-item class="labelInput">{{item.valor}}ml</ion-item></td>
+                                <td><ion-item class="labelInput">{{item.descripcion}}</ion-item></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 
+                    <ion-label>{{nicotinaLabelText}}</ion-label>
+                    <ion-item *ngFor="let item of datosTablaNicotina">
+                        <ion-label item-left>{{item.texto}}</ion-label>
+                        <ion-label item-content>{{item.valor}}ml</ion-label>
+                        <ion-label item-right>{{item.descripcion}}</ion-label>
+                    </ion-item> 
+                    -->
+                    <ion-item-divider></ion-item-divider>
+                </div>
+
+                <div #resultadoContenidoAromas>
+                    <table class="tableDatos">
+                        <tbody> <tr>
+                                <td><ion-label>{{aromasLabelText}}</ion-label></td>
+                                <td><ion-item class="labelInput"></ion-item></td>
+                                <td><ion-item class="labelInput"></ion-item></td>
+                        </tr> </tbody>
+                    </table>
+                    <table class="tableDatos">
+                        <tbody *ngFor="let item of datosTablaAromas" >
+                            <tr>
+                                <td><ion-item class="labelInput">{{item.texto}}</ion-item></td>
+                                <td><ion-item class="labelInput">{{item.valor}}ml</ion-item></td>
+                                <td><ion-item class="labelInput">{{item.descripcion}}</ion-item></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 
+                    <ion-label>{{aromasLabelText}}</ion-label>
+                    <ion-item *ngFor="let item of datosTablaAromas">
+                        <ion-label item-left>{{item.texto}}</ion-label>
+                        <ion-label item-content>{{item.valor}}ml</ion-label>
+                        <ion-label item-right>{{item.descripcion}}</ion-label>
+                    </ion-item> 
+                    -->
+                    <ion-item-divider></ion-item-divider>
+                </div>
+                
+                <div #resultadoTotal>
+                    <table class="tableDatos">
+                        <tbody> <tr>
+                                <td><ion-label>{{totalTexto}}</ion-label></td>
+                                <td><ion-label class="labelInput">{{totalValor}} ml</ion-label></td>
+                                <td><ion-label class="labelInput">{{totalDescripcion}}</ion-label></td>
+                        </tr> </tbody>
+                    </table>
+                <!-- 
+                <ion-item>
+                    <ion-label item-left>{{totalTexto}}</ion-label>
+                    <ion-label item-content>{{totalValor}} ml</ion-label>
+                    <ion-label item-right>{{totalDescripcion}}</ion-label>
+                </ion-item> 
+                -->
+                </div>
+
+            </ion-list>
+
+            <!-- <div class="row" *ngFor="let item of datosTabla">
+
+                <div class="col col-50" item-start>{{item.texto}}</div>
+                <div class="col" item-end>{{item.valor}}</div>
+
+            </div> -->
+
+            <!-- <div class="row" *ngFor="let item of datosTabla">
+
+                <div class="col col-50" item-start>{{item.texto}}</div>
+                <div class="col" item-end>{{item.valor}}</div>
+
+            </div> -->
+
+        </ion-card-content>
+
+    </ion-card>
+
+</ion-content>
